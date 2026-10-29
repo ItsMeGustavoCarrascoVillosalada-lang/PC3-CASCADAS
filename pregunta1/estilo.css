@@ -1,0 +1,47 @@
+body {
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  background-color: aqua;
+  padding: 20px;
+  border-top-color: 2px solid red;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.1s;
+}
+.menu:hover {
+  background-color: pink;
+}
+
+.seccion {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.seccion::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition-property: width, color;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.1s;
+}
+.seccion:hover {
+  color: green;
+}
+.seccion:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=estilo.css.map */

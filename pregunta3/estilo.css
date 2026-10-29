@@ -1,0 +1,51 @@
+body {
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.subnav-toolbar {
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: bisque;
+  border: 2px solid blue;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.subnav-toolbar a {
+  position: relative;
+  color: green;
+  text-decoration: none;
+}
+.subnav-toolbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.1s;
+}
+.subnav-toolbar a:hover::after {
+  width: 100%;
+}
+@supports (position: sticky) or (position: -webkit-sticky) {
+  .subnav-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px black;
+  }
+}/*# sourceMappingURL=estilo.css.map */
